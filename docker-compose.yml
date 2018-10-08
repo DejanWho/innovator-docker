@@ -1,0 +1,23 @@
+version: '3.7'
+
+services:
+  innovator:
+    image: softwarevisions/innovator-ce-app
+    container_name: innovator-app
+    ports:
+      - 80:80
+    mac_address: <your mac address>
+    volumes:
+      - ./conf:C:/inetpub/wwwroot/conf/
+
+  db:
+    image: softwarevisions/innovator-ce-db
+    container_name: innovator-db
+    ports:
+      - 1433:1433
+    volumes:
+      - ./db/content:C:/temp/
+    environment:
+      sa_password: 'innovator1280++'
+      attach_dbs: '[{"dbName":"InnovatorSolutions","dbFiles":["C:\\temp\\InnovatorSolutions.mdf","C:\\temp\\InnovatorSolutions_log.ldf"]}]'
+      ACCEPT_EULA: y

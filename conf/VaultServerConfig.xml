@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VaultServer>
+	<AppServerURL>http://innovator-app/InnovatorServer/Server/InnovatorServer.aspx</AppServerURL>
+	<LocalPath>C:\inetpub\wwwroot\vault\data\</LocalPath>
+	<login_name>vadmin</login_name>
+	<name>Default</name>
+	<password>vadmin</password>
+	<version>11.0.0</version>
+</VaultServer>
